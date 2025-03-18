@@ -1,43 +1,36 @@
 .header {
-  background-color: #413896;
-  padding: 24px;
+  background: #ece906;
+  padding: 10px;
+  border-radius: 100px;
+  margin: 10px 200px 20px 200px;
+}
+.searchForm {
   display: flex;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 24px;
 }
-
-.form {
-  display: flex;
-  gap: 24px;
+.formInput {
+  width: 400px;
+  height: 40px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid #3f87a6;
+  border-radius: 50px;
+  color: black;
 }
-
-.input {
+.formInput::placeholder {
+  font-size: 20px;
+}
+.submitButton {
+  background-color: transparent;
   border: none;
-  outline: none;
-  font-family: "Roboto Mono", serif;
-  font-size: 16px;
-  padding: 4px;
-  width: 360px;
-  border-radius: 4px;
-  transition: border 300ms ease-in-out;
 }
-
-.input:focus {
-  border: 2px solid #ec1e0f;
-}
-
-.searchButton {
-  width: 98px;
-  font-size: 16px;
-  padding: 4px;
-  background-color: #4be40f;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 300ms ease-in-out, font-weight 300ms ease-in-out;
-}
-
-.searchButton:hover,
-.searchButton:focus {
-  background-color: #81ce06;
-  font-weight: 600;
+.toast {
+  font-size: 30px;
+  font-weight: 400;
+  color: red;
+  background-color: darkblue;
+  border-radius: 10px;
+  padding: 10px;
 }

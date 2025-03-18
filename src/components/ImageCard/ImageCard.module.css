@@ -1,6 +1,13 @@
-.image {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: center;
+.imgCard{
+    width: calc((100% - 60px) / 4);
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: scale 0.3s ease;
+}
+.img:hover {
+    scale: 1.05;
 }
