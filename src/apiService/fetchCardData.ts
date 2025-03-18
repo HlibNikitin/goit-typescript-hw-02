@@ -10,7 +10,18 @@ axios.defaults.params = {
 };
 
 // Explicitly define the types for the parameters
-export const fetchPhotos = async (param: string, page: number) => {
-  const { data } = await axios.get(`search/photos?query=${param}&page=${page}`);
-  return data;
+export const fetchPhotos = async (
+  param: string,
+  page: number
+): Promise<IAppState[]> => {
+  try {
+    // Викликаємо axios з дженериком для типізації відповіді
+    const response = await axios.get<IAppState[]>(
+      `https://api.unsplash.com/search/photos?query=${param}&page=${page}&client_id=${API_KEY}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching photos:", error);
+    throw error;
+  }
 };

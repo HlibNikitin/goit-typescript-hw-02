@@ -1,6 +1,10 @@
 export interface IAppState {
   currentPage: number;
   totalPages?: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
 }
 
 export interface IImage {
